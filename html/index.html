@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize"></script>
+<script src="https://live.zwidgets.com/js-sdk/1.0.5/ZohoEmbededAppSDK.min.js"></script>
+<script src="../javascript/map.js"></script>
+<script src="../javascript/custom.js"></script>
+<!-- <script src="../javascript/custom.js"></script> -->
+
+<link rel="stylesheet" href="../css/map.css">
+</head>
+<body>
+<table>
+<tr>
+<td style="vertical-align:top">
+	Apply filter: 
+	<select id="type" onchange="filterMarkers(this.value);">
+		<option value="0">---Map All Leads---</option>
+    		<option value="1">Visited in Last 30 days</option>
+    		<option value="2">Visited in 30-60 days</option>
+    		<option value="3">Visited in 60-90 days</option>	
+	</select>
+</td>
+</tr>
+<tr>&nbsp;</tr>
+<tr>
+<td>
+	<div id="map-canvas" style="width: 600px; height: 300px;"></div>
+
+</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		initializeWidget();
+	})
+</script>
+
+</body>
+
+
+</html>

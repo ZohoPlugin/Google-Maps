@@ -44,7 +44,7 @@ function addMarker(markerArr,index) {
         title: title,
         position: pos,
         category: category,
-        icon:"http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+        icon:"https://maps.google.com/mapfiles/ms/icons/red-dot.png",
         map: map
         });
     }else if (category == 2) {
@@ -52,7 +52,7 @@ function addMarker(markerArr,index) {
         title: title,
         position: pos,
         category: category,
-        icon:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+        icon:"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
         map: map
         });
     }else if(category == 1){
@@ -60,7 +60,7 @@ function addMarker(markerArr,index) {
         title: title,
         position: pos,
         category: category,
-        icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+        icon:"https://maps.google.com/mapfiles/ms/icons/green-dot.png",
         map: map
         });
     }

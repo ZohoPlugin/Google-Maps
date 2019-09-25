@@ -32,7 +32,7 @@ function initializeWidget()
                 	var leadArray = [];
 					leadArray[0]=response.data[i].Last_Name; //lastname
 					leadArray[1]=response.data[i].googlemaps__Latitude; //lat
-					leadArray[2]=response.data[i].googlemaps__Longitude	; //lng
+					leadArray[2]=response.data[i].googlemaps__Longitute	; //lng
 					//console.log(leadArray);
             		if(date2>date1)
             		{

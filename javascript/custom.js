@@ -21,19 +21,16 @@ function initializeWidget()
 				 marker = [];
 				for (i = 0; i < response.data.length; i++) 
 				{
-					var lastVisitedDate = response.data[i].googlemaps__Date_of_last_visit;
+					var lastVisitedDate = response.data[i].googlemapreports__Date_of_last_visit;
 					var currentDate = new Date().toISOString().slice(0,10);
 					var date1 = new Date(lastVisitedDate);
                 	var date2 = new Date(currentDate);
-                	//console.log("last date ===== >" + date1 + " current date ======>" + date2);
         		    var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
                 	var diffDays = ((date1.getTime() - date2.getTime()) / (oneDay));
-                	//console.log("difference in date ========>"+diffDays);
                 	var leadArray = [];
 					leadArray[0]=response.data[i].Last_Name; //lastname
-					leadArray[1]=response.data[i].googlemaps__Latitude; //lat
-					leadArray[2]=response.data[i].googlemaps__Longitute	; //lng
-					//console.log(leadArray);
+					leadArray[1]=response.data[i].googlemapreports__Latitude; //lat
+					leadArray[2]=response.data[i].googlemapreports__Longitude; //lng
             		if(date2>date1)
             		{
             			diffDays=Math.abs(diffDays);
@@ -61,14 +58,13 @@ function initializeWidget()
 					}
 				}
 				for (i = 0; i < marker.length; i++) {
-						console.log(marker[i],i);
-        				addMarker(marker[i],i);
-    				}
-    			
+					console.log(marker[i],i);
+    				addMarker(marker[i],i);
+				}
 			});	
 		}
 	})
-// initialize();
-        
-ZOHO.embeddedApp.init();
+	// initialize();
+	        
+	ZOHO.embeddedApp.init();
 }

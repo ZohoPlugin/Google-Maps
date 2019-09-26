@@ -17,8 +17,7 @@ function addMarker(markerArr,index) {
     if(markerArr[4]>100)
     {
         diffdate=100;
-    }else
-    {
+    } else {
         diffdate=markerArr[4];
     } 
     var title = markerArr[0];
@@ -40,39 +39,38 @@ function addMarker(markerArr,index) {
     // Mark markers with different colors
 
     if(category == 3){
-    tempMarker = new google.maps.Marker({
-        title: title,
-        position: pos,
-        category: category,
-        icon:"https://maps.google.com/mapfiles/ms/icons/red-dot.png",
-        map: map
-        });
-    }else if (category == 2) {
         tempMarker = new google.maps.Marker({
-        title: title,
-        position: pos,
-        category: category,
-        icon:"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-        map: map
+            title: title,
+            position: pos,
+            category: category,
+            icon:"https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            map: map
         });
-    }else if(category == 1){
+    } else if (category == 2) {
         tempMarker = new google.maps.Marker({
-        title: title,
-        position: pos,
-        category: category,
-        icon:"https://maps.google.com/mapfiles/ms/icons/green-dot.png",
-        map: map
+            title: title,
+            position: pos,
+            category: category,
+            icon:"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            map: map
+        });
+    } else if(category == 1){
+        tempMarker = new google.maps.Marker({
+            title: title,
+            position: pos,
+            category: category,
+            icon:"https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+            map: map
         });
     }
+
     tempMarkerArray.push(tempMarker);
     
     // Marker click listener
     
     google.maps.event.addListener(tempMarker, 'click', (function (tempMarker, content) {
         return function () {
-            //console.log('Gmarker 1 gets pushed');
-
-        infowindow = new google.maps.InfoWindow({
+            infowindow = new google.maps.InfoWindow({
                                 content: content
                             });
             infowindow.open(map, tempMarker);

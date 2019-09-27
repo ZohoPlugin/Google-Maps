@@ -6,7 +6,7 @@ Google Maps widget enables users to view leads locations in Google Maps within Z
 ## To use this widget the following steps has to be followed:
 
 - Create custom fields in the Leads module 
-	1. Date of last visit (DD/MM/YYYY) - To store the last date since a lead was contacted by the field service rep.
+	1. Date of last visit - To store the last date since a lead was contacted by the field service rep.
 	2. Latitude
 	3. Longitute
 		Both these values are required to store the location details of a lead. 
